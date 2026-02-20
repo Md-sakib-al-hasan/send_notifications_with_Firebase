@@ -12,6 +12,7 @@ const config_1 = require("@nestjs/config");
 const firebase_service_1 = require("./firebase.service");
 const notification_service_1 = require("./notification.service");
 const notification_controller_1 = require("./notification.controller");
+const app_controller_1 = require("./app.controller");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -22,7 +23,7 @@ exports.AppModule = AppModule = __decorate([
                 isGlobal: true,
             }),
         ],
-        controllers: [notification_controller_1.NotificationController],
+        controllers: [app_controller_1.AppController, notification_controller_1.NotificationController],
         providers: [firebase_service_1.FirebaseService, notification_service_1.NotificationService],
     })
 ], AppModule);
